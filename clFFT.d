@@ -1,3 +1,5 @@
+module clFFT;
+
 import derelict.opencl.cl;
 
 enum clfftVersionMajor = 2;
