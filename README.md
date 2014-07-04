@@ -1,7 +1,7 @@
 clFFT-D
 =======
 
-D bindings to clFFT (https://github.com/clMathLibraries/clFFT)
+D bindings to clFFT (https://github.com/clMathLibraries/clFFT), an FFT library for opencl.
 
 Usage
 -----
