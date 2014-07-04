@@ -1,0 +1,13 @@
+{
+    "name": "clfft",
+    "description": "D bindings to the clFFT library",
+    "homepage": "https://github.com/John-Colvin/clFFT-D",
+    "license": "Apache-2.0",
+
+    "targetType": "sourceLibrary",
+    "sourcePaths": ["."],
+
+    "dependencies": {
+        "derelict_extras-opencl": ">=1.2.0"
+    }
+}
