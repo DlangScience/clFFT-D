@@ -6,6 +6,9 @@
 
     "targetType": "sourceLibrary",
     "sourcePaths": ["."],
+    "importPaths": ["."],
+    
+    "libs": ["clFFT"],
 
     "dependencies": {
         "derelict_extras-opencl": ">=1.2.0"

@@ -77,7 +77,7 @@ mixin template FreeEnumMembers(T)
             string s;
             foreach(member; __traits(allMembers, T))
             {
-                s ~= "enum T " ~ member ~ " = T." ~ member ~ ",\n";
+                s ~= "enum T " ~ member ~ " = T." ~ member ~ ";\n";
             }
             return s;
             }());
@@ -108,7 +108,7 @@ enum clfftLayout
     CLFFT_REAL, /*!< An array of real numbers, with no corresponding imaginary components. */
     ENDLAYOUT /*!< This value will always be last, and marks the length of clfftLayout. */
 }
-mixin AnonymousEnum!clfftLayout;
+mixin FreeEnumMembers!clfftLayout;
 
 /*! @brief This is the expected precision of each FFT.
  */
@@ -122,7 +122,7 @@ enum clfftPrecision
     CLFFT_DOUBLE_FAST, /*!< Faster implementation preferred. */
     ENDPRECISION /*!< This value will always be last, and marks the length of clfftPrecision. */
 }
-mixin AnonymousEnum!clfftPrecision;
+mixin FreeEnumMembers!clfftPrecision;
 
 /*! @brief What is the expected direction of each FFT, time or the frequency domains */
 enum clfftDirection
@@ -133,7 +133,7 @@ enum clfftDirection
     CLFFT_PLUS = 1,	/*!< Alias for the backward transform. */
     ENDDIRECTION /*!< This value will always be last, and marks the length of clfftDirection. */
 }
-mixin AnonymousEnum!clfftDirection;
+mixin FreeEnumMembers!clfftDirection;
 
 /*! @brief Are the input buffers overwritten with the results */
 enum clfftResultLocation
@@ -142,7 +142,7 @@ enum clfftResultLocation
     CLFFT_OUTOFPLACE, /*!< Seperate input and output buffers. */
     ENDPLACE /*!< This value will always be last, and marks the length of clfftPlaceness. */
 }
-mixin AnonymousEnum!clfftResultLocation;
+mixin FreeEnumMembers!clfftResultLocation;
 
 /*! @brief This determines whether the result is returned in original order. It is valid only 
   for
@@ -155,7 +155,7 @@ enum clfftResultTransposed {
     ENDTRANSPOSED /*!< This value will always be last, and marks the length of 
                           clfftResultTransposed */
 }
-mixin AnonymousEnum!clfftResultTransposed;
+mixin FreeEnumMembers!clfftResultTransposed;
 
 /*! BitMasks to be used with clfftSetupData.debugFlags */
 enum CLFFT_DUMP_PROGRAMS = 0x1;
