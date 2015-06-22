@@ -4,7 +4,6 @@
     "homepage": "https://github.com/John-Colvin/clFFT-D",
     "license": "Apache-2.0",
 
-    "targetType": "sourceLibrary",
     "sourcePaths": ["."],
     "importPaths": ["."],
     
@@ -12,5 +11,16 @@
 
     "dependencies": {
         "derelict_extras-opencl": ">=1.2.0"
-    }
+    },
+
+    "configurations": [
+        {
+            "name": "default",
+            "targetType": "sourceLibrary"
+        },
+        {
+            "name": "docs",
+            "targetType": "library"
+        }
+    ]
 }
