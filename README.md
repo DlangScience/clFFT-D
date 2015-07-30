@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/DlangScience/clFFT-D.svg?branch=master)](https://travis-ci.org/DlangScience/clFFT-D)
+
 clFFT-D
 =======
 
