@@ -1,3 +1,5 @@
+sudo: false
+
 language: d
 
 d:
@@ -6,5 +8,8 @@ d:
  - ldc-0.15.1
  - gdc
 
-script:
-  - dub test --compiler=${DC}
+before_script:
+  - wget https://github.com/clMathLibraries/clFFT/releases/download/v2.6/clFFT-2.6.0-Linux-x64.tar.gz -O /tmp/clFFT-2.6.0-Linux-x64.tar.gz
+  - tar -xvf /tmp/clFFT-2.6.0-Linux-x64.tar.gz
+  - export LIBRARY_PATH=$LIBRARY_PATH:$PWD/clFFT-2.6.0-Linux-x64/lib64/
+  - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PWD/clFFT-2.6.0-Linux-x64/lib64/
