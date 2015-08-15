@@ -12,17 +12,6 @@
     "dependencies": {
         "derelict_extras-opencl": ">=1.2.0"
     },
-
-    "configurations": [
-        {
-            "name": "default",
-            "targetType": "sourceLibrary"
-        },
-        {
-            "name": "docs",
-            "targetType": "library"
-        }
-    ],
     
     "buildTypes": {
         "DSddox": {
