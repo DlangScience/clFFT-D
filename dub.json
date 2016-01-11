@@ -10,7 +10,7 @@
     "libs": ["clFFT"],
 
     "dependencies": {
-        "derelict_extras-opencl": ">=1.2.0"
+        "derelict-cl": ">=2.0.0"
     },
     
     "buildTypes": {
